@@ -1,4 +1,4 @@
-from lru_cache import SelectiveLRUCache
+from lru_cache.lru_cache import SelectiveLRUCache
 import cProfile
 
 @SelectiveLRUCache(parameters=lambda x:(x[0],), maxsize=None)
