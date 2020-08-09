@@ -76,15 +76,3 @@ class SelectiveLRUCache:
                 self.set(selected_args, func(*args))
             return self.get(selected_args)
         return cached_func
-
-# @SelectiveLRUCache(parameters=lambda x:(x[0],), maxsize=None)
-# def Fibonacci(n, cntr):
-#     if n<0:
-#         print("Incorrect input")
-#     elif n==0:
-#         return 0
-#     elif n==1:
-#         return 1
-#     else:
-#         return Fibonacci(n-1, cntr)+Fibonacci(n-2, cntr)
-# print(Fibonacci(40, 0))
