@@ -16,8 +16,20 @@ A Python Decorator similar to but simpler than functools.lru_cache with the extr
   ```
  * The "parameters" lambda function takes the list of parameters as input and outputs a tuple of the selected list of parameters. Here the lambda selects the first and third parameters from the list of parameters.
  
- ```python
- @SelectiveLRUCache(parameters=lambda x:(x[0], x[2]))
- ```
+   ```python
+   @SelectiveLRUCache(parameters=lambda x:(x[0], x[2]))
+   ```
  
-## Results
+## Performance
+ * When tested on the recursive fibonacci function, a **46000 times** faster execution and a **29000 times** reduction in the number of function calls was achieved.
+ * Fibonacci(40) without the cache took *331160289* function calls and *92.686* seconds as shown below:
+ 
+    ![](https://github.com/neeru1207/Selective_LRU_Cache_Decorator/blob/master/Without_Cache_Speed.png)
+  
+ * Fibonacci(40) with the cache took *1140* function calls and only *0.002* seconds to execute as shown below:
+ 
+    ![](https://github.com/neeru1207/Selective_LRU_Cache_Decorator/blob/master/With_Cache_Speed.png)
+  
+## Contributing
+ * Feel free to open an issue if any bug is found.
+ * Pull requests are welcome. Just make sure to contribute readable, well commented, and tested code.
