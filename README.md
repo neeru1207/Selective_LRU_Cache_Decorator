@@ -1,9 +1,9 @@
 # Selective_LRU_Cache_Decorator
-A Python Decorator similar to but simpler than functools.lru_cache with the extra ability to select parameters. It can be used to memoize recursive functions.
+A Python Decorator similar to but much simpler than functools.lru_cache with the extra ability to select parameters. It can be used to memoize recursive functions.
 
 ## Usage
 * Clone this repository and place the lru_cache module in the working directory.
-* Import the LRU Cache by typing the below command.
+* Import the LRU Cache in your Python code by typing the below command.
 
   ```python
   from lru_cache.lru_cache import SelectiveLRUCache
