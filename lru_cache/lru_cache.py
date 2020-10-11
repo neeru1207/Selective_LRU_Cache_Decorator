@@ -1,5 +1,6 @@
 from collections import OrderedDict
 import sys
+
 class SelectiveLRUCache:
     
     def __init__(self, parameters = lambda x:x, maxsize=128):
@@ -14,10 +15,12 @@ class SelectiveLRUCache:
         def islambda(v):
             LAMBDA = lambda:0
             return isinstance(v, type(LAMBDA)) and v.__name__ == LAMBDA.__name__
+        
         #Set maxsize to INF if it is None
         self.maxsize = maxsize if maxsize is not None else sys.maxsize
         if self.maxsize < 0:
             raise Exception("VALUE ERROR, Negative Max Size")
+            
         # Check if parameters is a lambda
         if not islambda(parameters):
             raise Exception("ILLEGAL ARGUMENT for parameters, Expected lambda")
